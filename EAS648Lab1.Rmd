@@ -87,4 +87,10 @@ ggplot() +
     scale_colour_gradientn(colours = magma(10))
 summary(boulder$DB)
 ```
+```{r}
+p <- ggplot() +
+  annotation_spatial(boulder) +
+  layer_spatial(boulder, aes(col = DB))
+p + scale_color_brewer(palette = "Dark2")
+```
 
