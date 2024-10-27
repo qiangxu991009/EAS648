@@ -72,4 +72,19 @@ boulder %>%
   ggplot(aes(x=DB, y=Street_dis)) + 
   geom_boxplot()
 ```
+```{r}
+library(sf)
+library(ggspatial)
+library(viridis)
+magma(10)
+```
+
+```{r}
+boulder <- st_read("~/Desktop/EAS648/lab1/BoulderSocialMedia/BoulderSocialMedia.shp")
+ggplot() +
+    geom_sf(data = boulder, aes(color=PT_Elev),
+    fill = NA, alpha = .2) + 
+    scale_colour_gradientn(colours = magma(10))
+summary(boulder$DB)
+```
 
