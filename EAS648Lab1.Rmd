@@ -116,7 +116,7 @@ boulder %>%
   filter(DB %in% c('Pano', 'Flickr')) %>%
   ggplot(aes(x = DB, y = TrailH_Dis)) +
   geom_boxplot() +
-  labs(title = "Distance from Road by Social Media Type",
-       x = "Social Media Platform", y = "Distance to Road (meters)")
+  labs(title = "Distance from Hiking Trails by Social Media Type",
+       x = "Social Media Platform", y = "Distance to Hiking Trails (meters)")
 ```
 
